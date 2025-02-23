@@ -1,0 +1,13 @@
+vcpkg_from_github(
+    REPO 4t-2/vizium
+    REF v1
+    SHA512 7104eefa1f36bee053309913861f6ddcb206eb328191c27825dc7ecc87298d4bdb351c7450dadeda65fcd58b6b4eb71f19e97f85e004d2a0133ba58d40c3414f
+	OUT_SOURCE_PATH SOURCE_PATH
+)
+
+message("HELLOHELLOHELLO ${SOURCE_PATH}")
+message("${PORT}")
+message("${CURRENT_PACKAGES_DIR}")
+message("${HEADER_FILES}")
+
+file(COPY "${SOURCE_PATH}/Viz" DESTINATION "${CURRENT_PACKAGES_DIR}/include")
